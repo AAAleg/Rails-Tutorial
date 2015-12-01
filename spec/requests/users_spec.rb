@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'support/utilities'
 
 RSpec.describe "Users", type: :request do
   subject { page }
