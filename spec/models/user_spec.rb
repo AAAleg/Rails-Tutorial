@@ -1,12 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  before { @user = User.new(name: "Test", email: "example@test.org") }
+  before { @user = User.new(name: "Test", email: "example@test.org", password_digest: "master") }
 
   subject { @user }
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
+  it { should respond_to(:password_digest) }
 
   it { should be_valid }
 
