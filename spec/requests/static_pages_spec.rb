@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'support/utitlities'
+require 'support/utilities'
 
 RSpec.describe "StaticPages", type: :request do
   describe "Static pages" do
