@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  before_save { self.email = email.downcase }
+  before_save { self.email = email.downcase! }
 
   EMAIL_REGEX = /[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+/i
 
