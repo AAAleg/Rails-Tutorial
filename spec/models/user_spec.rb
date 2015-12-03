@@ -43,7 +43,8 @@ RSpec.describe User, type: :model do
 
   describe "when email format is valid" do
     it "should be valid" do
-      addresses = %w[user@foo.COM A-US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
+      addresses = %w[user@foo.COM A-US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn
+      awwert@yandex.ru]
       addresses.each do |valid_address|
         @user.email = valid_address
         expect(@user).to be_valid
