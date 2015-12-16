@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'support/utilities'
 
 RSpec.describe "MicropostPages", type: :request do
   subject { page }
@@ -12,7 +13,7 @@ RSpec.describe "MicropostPages", type: :request do
     describe "with invalid information" do
 
       it "should not create a micropost" do
-        expect { click_button "Post" }.not_to chage(Micropost, :count)
+        expect { click_button "Post" }.not_to change(Micropost, :count)
       end
 
       describe "error messages" do
