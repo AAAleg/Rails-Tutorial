@@ -81,7 +81,7 @@ RSpec.describe "AuthenticationPages", type: :request do
 
         describe "in the Microposts controller" do
           describe "submitting to the create action" do
-            before { post micropost_path }
+            before { post microposts_path }
             specify { expect(response).to redirect_to(signin_path) }
           end
 
